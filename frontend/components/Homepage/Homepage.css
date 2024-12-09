@@ -1,0 +1,21 @@
+.homepage {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.homepage-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-logo {
+    max-width: 60%;
+    height: auto;
+    max-height: 40vh;
+    object-fit: contain;
+}

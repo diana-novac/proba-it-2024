@@ -1,0 +1,74 @@
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding-top: 80px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px 0;
+    gap: 40px;
+}
+
+.profile-card {
+    background: #00236D;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; 
+}
+
+.profile-card.left {
+    justify-content: flex-end;
+    padding-top: 50px;
+    position: relative;
+}
+
+.profile-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.profile-card p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 8px 0;
+}
+
+.add-recipe-btn-container {
+    margin-top: 20px;
+}
+
+.add-recipe-btn {
+    background-color: #00A000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-recipe-btn:hover {
+    background-color: #008000;
+}

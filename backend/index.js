@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const authRoutes = require('./routes/auth');
 const recipeRoutes = require('./routes/recipe');
 
@@ -7,6 +8,11 @@ const app = express();
 const port = 5000;
 
 app.use(express.json());
+app.use(cors({
+  origin: 'http://localhost:5173',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 
 app.use('/api/auth', authRoutes);
 

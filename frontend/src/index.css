@@ -24,10 +24,11 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100%; /* Ajustează pentru ca body să ocupe întreaga pagină */
+  display: block; /* Elimină poziționarea flex globală */
+  background-color: #242424; /* Păstrează fundalul */
 }
 
 h1 {

@@ -7,21 +7,21 @@ const authMiddleware = require('./middleware');
 const router = express.Router();
 
 router.post('/register', async (req, res) => {
-    const {username, fullName, email, password} = req.body;
+    const { username, fullName, email, password } = req.body;
 
     try {
-        const user = await User.findOne({email});
+        const user = await User.findOne({ email });
         if (user) {
-            return res.status(400).json({message: 'User already exists'});
+            return res.status(400).json({ message: 'User already exists' });
         }
-    
-    const hashedPassword = await bcrypt.hash(password, 10);
 
-    const newUser = new User({username, fullName, email, password : hashedPassword});
-    await newUser.save();
-    res.status(201).json({message: 'Successful registration'});
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        const newUser = new User({ username, fullName, email, password: hashedPassword });
+        await newUser.save();
+        res.status(201).json({ message: 'Successful registration' });
     } catch (err) {
-        res.status(500).json({message: 'Registration failed', error: err});
+        res.status(500).json({ message: 'Registration failed', error: err.message });
     }
 });
 
@@ -34,7 +34,7 @@ router.post('/login', async (req, res) => {
             return res.status(400).json({message: 'Invalid email'});
         }
 
-        const match = bcrypt.compare(password, user.password);
+        const match = await bcrypt.compare(password, user.password);
         if (!match) {
             return res.status(400).json({message: 'Invalid password'});
         }

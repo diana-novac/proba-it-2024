@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+.add-recipe-page {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.add-recipe-container {
+    background: #00236D;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 1px 14px 0px #021B2C;
+    text-align: left;
+}
+
+.add-recipe-container .form-group {
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.add-recipe-container .form-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+    display: block;
+}
+
+.add-recipe-container .form-group input,
+.add-recipe-container .form-group textarea {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.add-recipe-container .form-group input::placeholder,
+.add-recipe-container .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.add-recipe-container .form-group textarea {
+    height: 100px;
+}
+
+.add-recipe-container button {
+    background-color: #00A000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.add-recipe-container button:hover {
+    background-color: #008000;
+}
+
+.add-recipe-container .error-message {
+    color: #FF6347;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-recipe-container .success-message {
+    color: #00A000;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
